@@ -4,7 +4,8 @@ export class CommomPageData{
     }
     static get testSuites(){
         return{
-            registroYAutenticacion: 'Registro y Autenticacion',
+            registro: 'Registro',
+            autenticacion: 'Autenticacion',
             catalogoYCompra: 'Catalogo y Compra',
         };
     }
