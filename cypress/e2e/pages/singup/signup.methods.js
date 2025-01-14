@@ -1,3 +1,4 @@
+import { CommomPageMethods } from "../commom-page/commom-page.methods";
 import { SignupElements } from "./signup.elements";
 
 export class SignupMethods{
@@ -7,12 +8,15 @@ export class SignupMethods{
     static insertPassword(password){
         SignupElements.textboxes.password.invoke('val',password)
     }
-    static clickOnSignup(){
+    static clickOnSignupButton(){
         SignupElements.buttons.signup.click();
     }
     static signup(username, password){
         this.insertUsername(username);
         this.insertPassword(password);
         this.clickOnSignup();
+    }
+    static verifySignupSeccesfulMessageDisplay(){
+        CommomPageMethods.verifyAlert("Sign up successful");
     }
 }

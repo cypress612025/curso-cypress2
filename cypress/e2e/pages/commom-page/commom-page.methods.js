@@ -3,6 +3,7 @@ import { CommomPageElements } from "./commom-page.elements";
 
 export class CommomPageMethods{
     static navigateToDemoBlaze(){
+        cy.clearCookies();
         cy.visit(CommomPageData.url);
     }
     static clickOnHomeOption(){
@@ -23,5 +24,10 @@ export class CommomPageMethods{
     }
     static clickOnSignUpOption(){
         CommomPageElements.topMenu.signUp.click();
+    }
+    static verifyAlert(expecdMessage){
+        cy.on('window: alert', (str)=>{
+            expect(str).to.equal(expecdMessage)
+        })
     }
 }
