@@ -16,7 +16,7 @@ export class CommomPageMethods{
         CommomPageElements.topMenu.aboutUs.click();
     }
     static clickOnCartOption(){
-        CommomPageMethods.topMenu.cart.click();
+        CommomPageElements.topMenu.cart.click();
     }
     static clickOnLogInOption(){
         CommomPageElements.topMenu.logIn.click();
@@ -25,6 +25,7 @@ export class CommomPageMethods{
     static clickOnSignUpOption(){
         CommomPageElements.topMenu.signUp.click();
     }
+    //metodo para verificar alertas de cypress
     static verifyAlert(expecdMessage){
         cy.on('window: alert', (str)=>{
             expect(str).to.equal(expecdMessage)

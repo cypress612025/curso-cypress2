@@ -13,6 +13,6 @@ export class HomeElements{
         };
     }
     static product(producName){
-        return cy.contains('a',producName)
+        return cy.contains('a',producName, {timeout:30000});
     }
 }

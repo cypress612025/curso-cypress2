@@ -17,4 +17,5 @@ export class HomeMethods{
         HomeElements.product(producName).should('be.visible')
 
     }
+    
 }
