@@ -1,11 +1,12 @@
 import { CommomPageData } from "../pages/commom-page/commom-page.data";
 import { CommomPageMethods } from "../pages/commom-page/commom-page.methods";
+import { LoginData } from "../pages/login/login.data";
 import { SignupMethods } from "../pages/singup/signup.methods";
 import { Logger } from "../util/logger";
 
 const user= CommomPageMethods.generateRandomString();
 const pass= CommomPageMethods.generateRandomString(7);
-const existinUser= 'random01';
+const existinUser= LoginData.validCredentials.username;
 
 describe(CommomPageData.testSuites.registro, ()=> {
     it("registro de usuario válido", ()=> {

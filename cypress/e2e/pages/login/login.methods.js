@@ -9,7 +9,7 @@ export class LoginMethods{
     static insertPassword(password){
         loginElements.textboxes.password.invoke('val', password)
     }
-    static clickOnLiginButoon(){
+    static clickOnLoginButoon(){
         loginElements.bottons.login.click()
     }
     static login(username, password){
