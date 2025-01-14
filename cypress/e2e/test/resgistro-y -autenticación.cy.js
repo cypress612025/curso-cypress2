@@ -3,6 +3,9 @@ import { CommomPageMethods } from "../pages/commom-page/commom-page.methods";
 import { SignupMethods } from "../pages/singup/signup.methods";
 import { Logger } from "../util/logger";
 
+const user= CommomPageMethods.generateRandomString();
+const pass= CommomPageMethods.generateRandomString(7);
+
 describe(CommomPageData.testSuites.registroYAutenticacion, ()=> {
     it("registro de usuario válido", ()=> {
         Logger.stepNumber(1)
@@ -15,8 +18,8 @@ describe(CommomPageData.testSuites.registroYAutenticacion, ()=> {
 
         Logger.stepNumber(3)
         Logger.step('Completar todos los campos obligatorios con infotmación valida')
-        SignupMethods.insertUsername('bvbvn');
-        SignupMethods.insertPassword('bvbvn');
+        SignupMethods.insertUsername(user);
+        SignupMethods.insertPassword(pass);
 
         Logger.stepNumber(4)
         Logger.step('Hacer clic en el boton Sign up')
