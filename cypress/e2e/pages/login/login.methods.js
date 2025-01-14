@@ -19,7 +19,7 @@ export class LoginMethods{
         Logger.subStep('insert password')
         this.insertPassword(password)
         Logger.subStep('Click on login button')
-        this.clickOnLiginButoon()
+        this.clickOnLoginButoon()
     }
     static verifayWrongPasswordMessage(){
         CommomPageMethods.verifyAlert('Wrong password')
