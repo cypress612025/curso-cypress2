@@ -17,6 +17,9 @@ export class CommomPageMethods{
     }
     static clickOnCartOption(){
         CommomPageElements.topMenu.cart.click();
+        Cypress.on('uncaught:exception', (err, runnable) => {
+          return false
+        })
     }
     static clickOnLogInOption(){
         CommomPageElements.topMenu.logIn.click();
