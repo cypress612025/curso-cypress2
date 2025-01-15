@@ -3,7 +3,8 @@ import { CommomPageElements } from "./commom-page.elements";
 
 export class CommomPageMethods{
     static navigateToDemoBlaze(){
-        cy.clearCookies();
+        cy.clearAllCookies();
+        cy.clearLocalStorage()
         cy.visit(CommomPageData.url);
     }
     static clickOnHomeOption(){
