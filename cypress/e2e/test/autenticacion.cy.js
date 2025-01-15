@@ -31,7 +31,7 @@ describe(CommomPageData.testSuites.autenticacion, ()=> {
         cy.wait(10000)
     });
 
-    xit('Inicio de sesion invalido', ()=>{
+    it('Inicio de sesion invalido', ()=>{
         Logger.stepNumber(1)
         Logger.step('navegar a la pagina de inicio')
         CommomPageMethods.navigateToDemoBlaze();
