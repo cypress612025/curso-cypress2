@@ -49,4 +49,13 @@ export class CommomPageMethods{
     static verifySignedUser(username){
         CommomPageElements.signedUser.should("have.text",`Welcome ${username}`)
     }
+    static logout(){
+        cy.get('body').then($body=>{
+            if($body.find('a', 'Log out').length>0){
+                CommomPageElements.topMenu.logOut.click()
+
+            }
+        })
+        
+    }
 }

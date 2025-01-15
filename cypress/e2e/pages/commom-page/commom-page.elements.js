@@ -19,6 +19,9 @@ export class CommomPageElements{
             get signUp(){
                 return cy.contains('a','Sign up');
             },
+            get logOut(){
+                return cy.contains('a', 'Log out')
+            }
          };
     }
     static get signedUser (){

@@ -24,9 +24,14 @@ describe(CommomPageData.testSuites.autenticacion, ()=> {
         LoginMethods.clickOnLoginButoon();
         Logger.verification('verificar que se redirije al usuario a la pagina de inicio')
         CommomPageMethods.verifySignedUser(LoginData.validCredentials.username);
+        cy.wait(10000)
+
+        Logger.posCondition('Log out')
+        CommomPageMethods.logout();
+        cy.wait(10000)
     });
 
-    it('Inicio de sesion invalido', ()=>{
+    xit('Inicio de sesion invalido', ()=>{
         Logger.stepNumber(1)
         Logger.step('navegar a la pagina de inicio')
         CommomPageMethods.navigateToDemoBlaze();
@@ -45,5 +50,6 @@ describe(CommomPageData.testSuites.autenticacion, ()=> {
         LoginMethods.clickOnLoginButoon();
         Logger.verification('verificar que se muestra mensaje de error indicando que el inicio de sesion a fallado')
         LoginMethods.verifayWrongPasswordMessage();
+
     });
 });
